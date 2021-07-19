@@ -1,0 +1,16 @@
+{
+    "baseUrl": "https://react-redux.realworld.io/",
+    "chromeWebSecurity": false,
+    "screenshotsFolder": "cypress/reports/mochareports/assets",
+    "video": true,
+    "screenshotOnRunFailure": true,
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+      "reportDir": "cypress/reports/mochareports",
+      "reportFilename": "report",
+      "overwrite": true,
+      "html": true,
+      "json": true,
+      "charts": true
+    }
+  }

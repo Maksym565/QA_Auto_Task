@@ -1,0 +1,30 @@
+{
+  "name": "qa_automation_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "(if exist cypress\\reports (rmdir /Q /S cypress\\reports)) && mkdir cypress\\reports && mkdir cypress\\reports\\mocha  &&  mkdir cypress\\reports\\mochareports",
+    "pretest": "npm run clean:reports",
+    "cypress:run": "npm install && cypress run",
+    "scripts": "npx cypress run",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports -- inline",
+    "posttest": "npm run generate-report",
+    "test": "npm run scripts || npm run posttest"
+  },
+  "author": "Maks",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^7.7.0"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^2.2.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "cypress-plugin-snapshots": "^1.4.4",
+    "mocha": "^9.0.2",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  }
+}
