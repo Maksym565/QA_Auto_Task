@@ -44,7 +44,7 @@ context("Automation Test Task", () => {
         logInPage.visit();
     })
 
-    it(`Fill in the "Username" and "Password" input fields and click the ${ELEMENTS.buttons.signup} button`, () => {
+    it(`Fill in the Username and Password input fields and click the ${ELEMENTS.buttons.signup} button`, () => {
         logInPage.typeEmail(localSTdataParsed.usernames.user_1);
         logInPage.typePassword(localSTdataParsed.passwords.password_1);
         logInPage.submit(ELEMENTS.buttons.signup);

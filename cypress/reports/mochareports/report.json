@@ -1,0 +1,211 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 4,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-07-19T18:39:25.918Z",
+    "end": "2021-07-19T18:39:35.681Z",
+    "duration": 8496,
+    "testsRegistered": 6,
+    "passPercent": 66.66666666666667,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "13c6e01c-75fd-434e-a471-031cf278f395",
+      "title": "",
+      "fullFile": "cypress/integration/QA_Automation_Tasks/task_1.js",
+      "file": "cypress/integration/QA_Automation_Tasks/task_1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c8494d6b-8ab8-4032-8373-f69ebc1804e2",
+          "title": "Automation Test Task",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fill in the Username and Password input fields and click the Sign-up button",
+              "fullTitle": "Automation Test Task Fill in the Username and Password input fields and click the Sign-up button",
+              "timedOut": null,
+              "duration": 5549,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/QA_Automation_Tasks/task_1.js/Automation Test Task -- Fill in the Username and Password input fields and click the Sign-up button (failed).png\"",
+              "code": "logInPage.typeEmail(localSTdataParsed.usernames.user_1);\nlogInPage.typePassword(localSTdataParsed.passwords.password_1);\nlogInPage.submit(ELEMENTS.buttons.signup);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sign-up' within the element: <input.btn.btn-success> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sign-up' within the element: <input.btn.btn-success> but never did.\n    at LogInPage.submit (https://www.pecodesoftware.com/__cypress/tests?p=cypress/integration/QA_Automation_Tasks/task_1.js:278:12)\n    at Context.eval (https://www.pecodesoftware.com/__cypress/tests?p=cypress/integration/QA_Automation_Tasks/task_1.js:161:15)",
+                "diff": null
+              },
+              "uuid": "119dd05a-78fe-49b0-9340-8e5157e4cf41",
+              "parentUUID": "c8494d6b-8ab8-4032-8373-f69ebc1804e2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that all elements are presented on the page",
+              "fullTitle": "Automation Test Task Verify that all elements are presented on the page",
+              "timedOut": null,
+              "duration": 568,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/QA_Automation_Tasks/task_1.js/Automation Test Task -- Verify that all elements are presented on the page (failed).png\"",
+              "code": "logInPage.verifyFields(ELEMENTS.inputs.username);\nlogInPage.verifyFields(ELEMENTS.inputs.password);\nlogInPage.verifyButtons(ELEMENTS.buttons.signup);",
+              "err": {
+                "message": "AssertionError: expected false to equal true",
+                "estack": "AssertionError: expected false to equal true\n    at Context.eval (https://www.pecodesoftware.com/__cypress/tests?p=cypress/integration/QA_Automation_Tasks/task_1.js:258:36)",
+                "diff": null
+              },
+              "uuid": "4daeef43-5e5d-45a6-acef-1dfe0d99be41",
+              "parentUUID": "c8494d6b-8ab8-4032-8373-f69ebc1804e2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create a tast case that will fail because of unsuccessful login (TestCase_1)",
+              "fullTitle": "Automation Test Task Create a tast case that will fail because of unsuccessful login (TestCase_1)",
+              "timedOut": null,
+              "duration": 986,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "logInPage.typeEmail(localSTdataParsed.usernames.user_1);\nlogInPage.typePassword(localSTdataParsed.passwords.password_1);\nlogInPage.submit(ELEMENTS.buttons.login);\nlogInPage.verifyErrors(ERRORS.error_1);",
+              "err": {},
+              "uuid": "9baa1f61-9dab-43b6-aeaa-65ca51a07918",
+              "parentUUID": "c8494d6b-8ab8-4032-8373-f69ebc1804e2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create a tast case that will fail because of unsuccessful login (TestCase_2)",
+              "fullTitle": "Automation Test Task Create a tast case that will fail because of unsuccessful login (TestCase_2)",
+              "timedOut": null,
+              "duration": 274,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "logInPage.submit(ELEMENTS.buttons.login);\nlogInPage.verifyErrors(ERRORS.error_2);\nlogInPage.verifyErrors(ERRORS.error_3);",
+              "err": {},
+              "uuid": "f37bc8e3-ad0e-4e6d-889d-84dfdac72239",
+              "parentUUID": "c8494d6b-8ab8-4032-8373-f69ebc1804e2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create a tast case that will fail because of unsuccessful login (TestCase_3)",
+              "fullTitle": "Automation Test Task Create a tast case that will fail because of unsuccessful login (TestCase_3)",
+              "timedOut": null,
+              "duration": 585,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "logInPage.typePassword(localSTdataParsed.passwords.password_1);\nlogInPage.submit(ELEMENTS.buttons.login);\nlogInPage.verifyErrors(ERRORS.error_2);",
+              "err": {},
+              "uuid": "9ebd5dba-95ae-44fc-864f-4afaa2a602b3",
+              "parentUUID": "c8494d6b-8ab8-4032-8373-f69ebc1804e2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create a tast case that will fail because of unsuccessful login (TestCase_4)",
+              "fullTitle": "Automation Test Task Create a tast case that will fail because of unsuccessful login (TestCase_4)",
+              "timedOut": null,
+              "duration": 534,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "logInPage.typeEmail(localSTdataParsed.usernames.user_1);\nlogInPage.submit(ELEMENTS.buttons.login);\nlogInPage.verifyErrors(ERRORS.error_3);",
+              "err": {},
+              "uuid": "fe0813df-c644-4580-990a-752db048618b",
+              "parentUUID": "c8494d6b-8ab8-4032-8373-f69ebc1804e2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9baa1f61-9dab-43b6-aeaa-65ca51a07918",
+            "f37bc8e3-ad0e-4e6d-889d-84dfdac72239",
+            "9ebd5dba-95ae-44fc-864f-4afaa2a602b3",
+            "fe0813df-c644-4580-990a-752db048618b"
+          ],
+          "failures": [
+            "119dd05a-78fe-49b0-9340-8e5157e4cf41",
+            "4daeef43-5e5d-45a6-acef-1dfe0d99be41"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8496,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

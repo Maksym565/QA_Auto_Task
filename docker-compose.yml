@@ -1,0 +1,12 @@
+version: "3"
+services:
+  e2e:
+    container_name: cypress-mocha-e2e
+    image: "maksym565/test"
+    build:
+        context: ./
+        dockerfile: Dockerfile
+    command: "test"
+    volumes:
+      - ./cypress/videos:/usr/src/app/cypress/videos
+      - ./cypress/reports:/usr/src/app/cypress/reports
